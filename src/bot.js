@@ -41,7 +41,7 @@ async function proximosacessos(){
         console.log('Não precisa add cep!')
     }else{
         console.log('Precisa adicionar cep');
-        await page.type('input[name="postalCode"]','89012-500', {delay:352});
+        await page.type('input[name="postalCode"]','00000-500', {delay:352});
         await console.log('CEP preenchido!');
     };
 
@@ -57,20 +57,20 @@ async function proximosacessos(){
     await page.waitForSelector('input[id="client-first-name"]');
     await page.type('input[id="client-first-name"]', '   Carlos', {delay:500});
     await console.log('Apareceu o primeiro nome, estou preenchendo...');
-    await page.type('input[id="client-last-name"]', 'C. Da Silva JR', {delay:200});
+    await page.type('input[id="client-last-name"]', 'C. XXXX JR', {delay:200});
     await console.log('Preenchido segundo nome');
-    await page.type('input[id="client-document"]', '801.563.638-87', {delay:200});
+    await page.type('input[id="client-document"]', '000.000.000-000', {delay:200});
     await console.log('Preenchido CPF');
-    await page.type('input[id="client-phone"]', '4733265984', {delay:200});
+    await page.type('input[id="client-phone"]', '0000000000', {delay:200});
     await page.waitForSelector('.btn-submit-wrapper');
     await page.click('.btn-submit-wrapper');
 
     //ENTREGA
     await page.waitForSelector('input[id="ship-number"]');
     await console.log('Campo de numero apareceu...');
-    await page.type('input[id="ship-number"]','429', {delay:300});
+    await page.type('input[id="ship-number"]','000', {delay:300});
     await console.log('Número de entrega preenchido');
-    await page.type('input[id="ship-receiverName"]','Carlos Clemente', {delay:300});
+    await page.type('input[id="ship-receiverName"]','Carlos XXXXX', {delay:300});
     await page.click('.btn-go-to-payment');
 
     
